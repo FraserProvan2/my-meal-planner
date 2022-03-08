@@ -1,8 +1,16 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
+// BG Pattern
+body {
+    background-image: url("../../public/img/bg.png");
+}
 
-// Bootstrap
+// Variables
+$primary: #0D47A1;
+@import 'variables';
+@import "node_modules/bootswatch/dist/sketchy/variables";
+
+// Bootstrap / Bootswatch
 @import '~bootstrap/scss/bootstrap';
+@import "node_modules/bootswatch/dist/sketchy/bootswatch";
