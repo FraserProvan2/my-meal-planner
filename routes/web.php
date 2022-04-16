@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IngredientsController;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -20,6 +21,8 @@ Auth::routes();
 // Home
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('ingredients', IngredientsController::class);
 
 // Overrides
 Route::get('/register', function() {
