@@ -9,19 +9,31 @@
             <div class="card-body p-0">
                 <table class="table table-striped">
                     <tbody>
-                        @foreach($ingredients as $ingredient)    
-                            <tr>
-                                <th scope="row">
-                                    <div class="pt-1">{{ $ingredient->name }}</div>
-                                </th>
-                                <td>
-                                    <button class="btn btn-sm btn-primary w-100">Edit</button>
-                                </td>
-                                <td>
-                                    <button class="btn btn-sm btn-danger w-100 ">Delete</button>
-                                </td>
-                            </tr>
-                        @endforeach
+                        @if($ingredients->count() > 0)
+                            @foreach($ingredients as $ingredient)    
+                                <tr>
+                                    <th scope="row">
+                                        <div class="pt-1">{{ $ingredient->name }}</div>
+                                    </th>
+                                    <td width="100">
+                                        <a class="btn btn-sm btn-primary w-100">Edit</a>
+                                    </td>
+                                    <td width="100">
+                                        <form method="post" action="{{ url('ingredients/' . $ingredient->id) }}"> 
+                                            @csrf
+                                            @method('DELETE')
+                                            <button 
+                                                class="btn btn-sm btn-danger w-100" 
+                                                type="submit" 
+                                                onclick="return confirm('Are you sure you want to delete this Ingredient?')"
+                                            >Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <div class="text-center text-danger mt-4 mb-3">No Ingredients Found!</div>
+                        @endif
                     </tbody>
                 </table>
 

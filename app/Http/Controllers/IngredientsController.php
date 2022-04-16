@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Ingredient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class IngredientsController extends Controller
 {
@@ -15,7 +17,7 @@ class IngredientsController extends Controller
     public function index()
     {
         return view('ingredients.index', [
-            'ingredients' => Ingredient::paginate(2)
+            'ingredients' => Ingredient::paginate(10)
         ]);
     }
 
@@ -82,6 +84,10 @@ class IngredientsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ingredient = Ingredient::findOrFail($id);
+        $ingredient->delete();
+
+        return Redirect('/ingredients')
+            ->with('error', 'Ingredient Deleted!');
     }
 }

@@ -23,6 +23,7 @@
     <div id="app">
         <main class="container py-4">
             @include('layouts.includes.navbar')
+            @include('layouts.includes.alerts')
             @yield('content')
         </main>
     </div>
