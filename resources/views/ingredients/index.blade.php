@@ -19,7 +19,7 @@
                                         <a class="btn btn-sm btn-primary w-100">Edit</a>
                                     </td>
                                     <td width="100">
-                                        <form method="post" action="{{ url('ingredients/' . $ingredient->id) }}"> 
+                                        <form method="post" action="{{ route('ingredients.destroy', $ingredient->id) }}"> 
                                             @csrf
                                             @method('DELETE')
                                             <button 
@@ -49,7 +49,11 @@
             <div class="card-header">{{ __('Add New') }}</div>
 
             <div class="card-body">
-                form ere
+                <form method="post" action="{{ route('ingredients.store') }}">
+                    @csrf
+                    <input class="form-control form-control" type="text" name="name" placeholder="Ingredient Name" />
+                    <button class="btn btn btn-success form-control mt-2" type="submit">Add</button>
+                </form>
             </div>
         </div>
     </div>

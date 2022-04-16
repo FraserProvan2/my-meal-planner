@@ -22,16 +22,6 @@ class IngredientsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -39,7 +29,17 @@ class IngredientsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|unique:ingredients|max:255',
+        ]);
+
+        $ingredient = Ingredient::create([
+            'name' => $request->get('name')
+        ]);
+
+        $message = ('Ingredient "' . $ingredient->name . '" Added!');
+        return Redirect('/ingredients')
+            ->with('success', $message);
     }
 
     /**
@@ -88,6 +88,6 @@ class IngredientsController extends Controller
         $ingredient->delete();
 
         return Redirect('/ingredients')
-            ->with('error', 'Ingredient Deleted!');
+            ->with('success', 'Ingredient Deleted!');
     }
 }
