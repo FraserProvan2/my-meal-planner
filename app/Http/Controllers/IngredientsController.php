@@ -50,7 +50,10 @@ class IngredientsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('ingredients.index', [
+            'ingredients' => Ingredient::paginate(10),
+            'ingreident' => Ingredient::findOrFail($id)
+        ]);
     }
 
     /**
@@ -73,7 +76,18 @@ class IngredientsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ingredient = Ingredient::findOrFail($id);
+
+        $request->validate([
+            'name' => 'required|unique:ingredients|max:255',
+        ]);
+
+        $ingredient->name = $request->get('name');
+        $ingredient->save();
+
+        $messages = ('Ingredient "' . $ingredient->name . '" Updated!');
+        return Redirect('/ingredients')
+            ->with('success', $messages);
     }
 
     /**

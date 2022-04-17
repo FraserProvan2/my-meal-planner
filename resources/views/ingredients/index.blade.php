@@ -4,7 +4,7 @@
 <div class="row justify-content-center">
     <div class="col-md-6 mb-3">
         <div class="card">
-            <div class="card-header">{{ __('Ingredients') }}</div>
+            <div class="card-header bg-secondary h4">{{ __('Ingredients') }}</div>
 
             <div class="card-body p-0">
                 <table class="table table-striped">
@@ -16,7 +16,7 @@
                                         <div class="pt-1">{{ $ingredient->name }}</div>
                                     </th>
                                     <td width="100">
-                                        <a class="btn btn-sm btn-primary w-100">Edit</a>
+                                        <a class="btn btn-sm btn-primary w-100" href="{{ route('ingredients.show', $ingredient->id) }}">Edit</a>
                                     </td>
                                     <td width="100">
                                         <form method="post" action="{{ route('ingredients.destroy', $ingredient->id) }}"> 
@@ -46,14 +46,34 @@
 
     <div class="col-md-6">
         <div class="card">
-            <div class="card-header">{{ __('Add New') }}</div>
+            <div class="card-header bg-secondary h4">{{ __('Add New') }}</div>
 
             <div class="card-body">
-                <form method="post" action="{{ route('ingredients.store') }}">
-                    @csrf
-                    <input class="form-control form-control" type="text" name="name" placeholder="Ingredient Name" />
-                    <button class="btn btn btn-success form-control mt-2" type="submit">Add</button>
-                </form>
+                @if(isset($ingreident))
+                    <form method="post" action="{{ route('ingredients.update', $ingreident->id) }}">
+                        @csrf
+                        @method('PATCH')
+                        <input 
+                            class="form-control form-control-lg" 
+                            type="text" 
+                            name="name" 
+                            placeholder="Ingredient Name" 
+                            value="{{ ($ingreident) ? $ingreident->name : '' }}" 
+                        />
+                        <button class="btn btn btn-success form-control mt-2" type="submit">Update</button>
+                    </form>
+                @else
+                    <form method="post" action="{{ route('ingredients.store') }}">
+                        @csrf
+                        <input 
+                            class="form-control form-control-lg" 
+                            type="text" 
+                            name="name" 
+                            placeholder="Ingredient Name"
+                        />
+                        <button class="btn btn btn-success form-control mt-2" type="submit">Add</button>
+                    </form>
+                @endif
             </div>
         </div>
     </div>
