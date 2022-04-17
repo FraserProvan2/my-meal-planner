@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+<h1>Ingredients</h1>
+
 <div class="row justify-content-center">
     <div class="col-md-8 mb-3">
         <div class="card">
-            <div class="card-header bg-secondary h4">{{ __('Ingredients') }}</div>
-
             <div class="card-body p-0">
                 <table class="table table-striped">
                     <tbody>

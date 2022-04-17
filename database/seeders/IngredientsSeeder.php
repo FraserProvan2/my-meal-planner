@@ -18,19 +18,15 @@ class IngredientsSeeder extends Seeder
             [ 
                 'name' => 'Red Pepper', 
                 'user_id' => 1,
-                'imgSrc' => 'https://images.ctfassets.net/6jpeaipefazr/1TOr5LlvLrYUqKCky4x7Xe/a93a8da6d9f1e52f2e8f5204c5374b56/co-op-red-peppers.jpg' 
             ],[ 
                 'name' => 'Yellow Pepper', 
                 'user_id' => 1,
-                'imgSrc' => 'https://www.bobtailfruit.co.uk/pub/media/catalog/product/l/a/large_94ce8779-3edd-4fa0-9abb-e73823170d23.jpg' 
             ],[ 
                 'name' => 'Penne Pasta', 
                 'user_id' => 1,
-                'imgSrc' => 'https://ecom-su-static-prod.wtrecom.com/images/products/11/LN_017162_BP_11.jpg' 
             ],[ 
                 'name' => 'Meatballs', 
                 'user_id' => 1,
-                'imgSrc' => 'https://www.ikea.com/gb/en/images/products/huvudroll-meatballs-frozen__0928072_pe789720_s5.jpg?f=s' 
             ],
         ];
 

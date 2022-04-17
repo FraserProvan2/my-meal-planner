@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IngredientsController;
+use App\Http\Controllers\RecipesController;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -25,4 +26,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Ingredients
     Route::resource('ingredients', IngredientsController::class);
+
+    // Ingredients
+    Route::resource('recipes', RecipesController::class);
 });
