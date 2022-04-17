@@ -25,6 +25,7 @@
             @include('layouts.includes.navbar')
             @include('layouts.includes.alerts')
             @yield('content')
+            @include('layouts.includes.footer')
         </main>
     </div>
 </body>

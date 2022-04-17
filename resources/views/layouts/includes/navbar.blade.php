@@ -10,8 +10,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
-                <a class="nav-link" href="{{ url('/ingredients') }}">{{ __('Ingredients') }}</a>
-                <a class="nav-link" href="{{ url('/recipes') }}">{{ __('Recipes') }}</a>
+                <a 
+                    class="nav-item nav-link {{ request()->routeIs('ingredients.*') ? 'active' : '' }}" 
+                    href="{{ url('/ingredients') }}"
+                >{{ __('Ingredients') }}</a>
+                <a 
+                    class="nav-item nav-link {{ request()->routeIs('recipes.*') ? 'active' : '' }}" 
+                    href="{{ url('/recipes') }}"
+                >{{ __('Recipes') }}</a>
             </ul>
 
             <!-- Right Side Of Navbar -->

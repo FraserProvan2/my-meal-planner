@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row justify-content-center">
-    <div class="col-md-6 mb-3">
+    <div class="col-md-8 mb-3">
         <div class="card">
             <div class="card-header bg-secondary h4">{{ __('Ingredients') }}</div>
 
@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-4 mb-3">
         <div class="card">
             <div class="card-header bg-secondary h4">{{ __('Add New') }}</div>
 
