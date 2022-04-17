@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ingredient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Symfony\Component\HttpFoundation\Session\Session;
 
@@ -17,7 +18,7 @@ class IngredientsController extends Controller
     public function index()
     {
         return view('ingredients.index', [
-            'ingredients' => Ingredient::paginate(10)
+            'ingredients' => Ingredient::where('user_id', Auth::id())->paginate(10)
         ]);
     }
 
@@ -30,12 +31,13 @@ class IngredientsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:ingredients|max:255',
+            'name' => 'required|max:255',
         ]);
 
-        $ingredient = Ingredient::create([
-            'name' => $request->get('name')
-        ]);
+        $ingredient = new Ingredient();
+        $ingredient->name = $request->get('name');
+        $ingredient->user_id = Auth::id();
+        $ingredient->save();
 
         $message = ('Ingredient "' . $ingredient->name . '" Added!');
         return Redirect('/ingredients')
@@ -51,20 +53,9 @@ class IngredientsController extends Controller
     public function show($id)
     {
         return view('ingredients.index', [
-            'ingredients' => Ingredient::paginate(10),
+            'ingredients' => Ingredient::where('user_id', Auth::id())->paginate(10),
             'ingreident' => Ingredient::findOrFail($id)
         ]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
     }
 
     /**
@@ -77,6 +68,11 @@ class IngredientsController extends Controller
     public function update(Request $request, $id)
     {
         $ingredient = Ingredient::findOrFail($id);
+
+        if ($ingredient->user_id != Auth::id()) {
+            return Redirect('/ingredients')
+                ->with('error', 'Auth Error.');
+        }
 
         $request->validate([
             'name' => 'required|unique:ingredients|max:255',
@@ -99,6 +95,12 @@ class IngredientsController extends Controller
     public function destroy($id)
     {
         $ingredient = Ingredient::findOrFail($id);
+
+        if ($ingredient->user_id != Auth::id()) {
+            return Redirect('/ingredients')
+                ->with('error', 'Auth Error.');
+        }
+
         $ingredient->delete();
 
         return Redirect('/ingredients')
