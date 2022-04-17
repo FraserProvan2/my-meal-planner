@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\IngredientsController;
-use App\Http\Controllers\RecipesController;
+use App\Http\Controllers\MealsController;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -28,5 +28,5 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('ingredients', IngredientsController::class);
 
     // Ingredients
-    Route::resource('recipes', RecipesController::class);
+    Route::resource('meals', MealsController::class);
 });

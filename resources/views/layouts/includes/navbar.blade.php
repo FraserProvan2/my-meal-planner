@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md shadow-sm bg-primary navbar-dark py-3 px-2 mb-3">
+<nav class="navbar navbar-expand-md bg-primary navbar-dark py-3 px-2 mb-4">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -15,9 +15,9 @@
                     href="{{ url('/ingredients') }}"
                 >{{ __('Ingredients') }}</a>
                 <a 
-                    class="nav-item nav-link {{ request()->routeIs('recipes.*') ? 'active' : '' }}" 
-                    href="{{ url('/recipes') }}"
-                >{{ __('Recipes') }}</a>
+                    class="nav-item nav-link {{ request()->routeIs('meals.*') ? 'active' : '' }}" 
+                    href="{{ url('/meals') }}"
+                >{{ __('Meals') }}</a>
             </ul>
 
             <!-- Right Side Of Navbar -->

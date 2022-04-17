@@ -17,7 +17,9 @@
                                         <div class="pt-1">{{ $ingredient->name }}</div>
                                     </th>
                                     <td width="100">
-                                        <a class="btn btn-sm btn-primary w-100" href="{{ route('ingredients.show', $ingredient->id) }}">Edit</a>
+                                        <a class="btn btn-sm btn-info w-100" href="{{ route('ingredients.show', $ingredient->id) }}">
+                                            <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
+                                        </a>
                                     </td>
                                     <td width="100">
                                         <form method="post" action="{{ route('ingredients.destroy', $ingredient->id) }}"> 
@@ -27,7 +29,7 @@
                                                 class="btn btn-sm btn-danger w-100" 
                                                 type="submit" 
                                                 onclick="return confirm('Are you sure you want to delete this Ingredient?')"
-                                            >Delete</button>
+                                            ><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button>
                                         </form>
                                     </td>
                                 </tr>
@@ -47,11 +49,11 @@
 
     <div class="col-md-4 mb-3">
         <div class="card">
-            <div class="card-header bg-secondary h4">{{ __('Add New') }}</div>
+            <div class="card-header bg-secondary h4">{{ __((isset($toEdit)) ? 'Update' : 'Add New') }}</div>
 
             <div class="card-body">
-                @if(isset($ingreident))
-                    <form method="post" action="{{ route('ingredients.update', $ingreident->id) }}">
+                @if(isset($toEdit))
+                    <form method="post" action="{{ route('ingredients.update', $toEdit->id) }}">
                         @csrf
                         @method('PATCH')
                         <input 
@@ -59,7 +61,7 @@
                             type="text" 
                             name="name" 
                             placeholder="Ingredient Name" 
-                            value="{{ ($ingreident) ? $ingreident->name : '' }}" 
+                            value="{{ ($toEdit) ? $toEdit->name : '' }}" 
                         />
                         <button class="btn btn btn-success form-control mt-2" type="submit">Update</button>
                     </form>

@@ -54,7 +54,7 @@ class IngredientsController extends Controller
     {
         return view('ingredients.index', [
             'ingredients' => Ingredient::where('user_id', Auth::id())->paginate(10),
-            'ingreident' => Ingredient::findOrFail($id)
+            'toEdit' => Ingredient::findOrFail($id)
         ]);
     }
 

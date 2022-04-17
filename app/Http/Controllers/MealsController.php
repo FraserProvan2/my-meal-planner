@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Recipe;
+use App\Models\Meal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class RecipesController extends Controller
+class MealsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class RecipesController extends Controller
      */
     public function index()
     {
-        return view('recipes.index', [
-            'recipes' => Recipe::where('user_id', Auth::id())->paginate(10)
+        return view('meals.index', [
+            'meals' => Meal::where('user_id', Auth::id())->paginate(10)
         ]);
     }
 
@@ -27,7 +27,7 @@ class RecipesController extends Controller
      */
     public function create()
     {
-        //
+        return view('meals.create');
     }
 
     /**
