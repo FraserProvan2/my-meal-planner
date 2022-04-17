@@ -18,13 +18,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 Auth::routes();
 
-// Home
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Auth Routes
+Route::middleware(['auth'])->group(function () {
+    // Home
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('ingredients', IngredientsController::class);
-
-// Overrides
-Route::get('/register', function() {
-    return Response('', 404);
+    // Ingredients
+    Route::resource('ingredients', IngredientsController::class);
 });
