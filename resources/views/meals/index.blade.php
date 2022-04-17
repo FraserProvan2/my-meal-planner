@@ -33,12 +33,12 @@
                                             <small class="text-muted">Serving(s)</small>
                                         </div>
                                     </th>
-                                    <td width="80">
+                                    <td width="100">
                                         <a class="btn btn-sm btn-info w-100" href="{{ route('meals.show', $meal->id) }}">
                                             <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
                                         </a>
                                     </td>
-                                    <td width="80">
+                                    <td width="100">
                                         <form method="post" action="{{ route('meals.destroy', $meal->id) }}"> 
                                             @csrf
                                             @method('DELETE')
