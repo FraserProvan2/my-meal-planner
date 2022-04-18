@@ -22,7 +22,7 @@
                                 <tr>
                                     <th scope="row">
                                         <div class="pt-1">
-                                            <a href="">
+                                            <a href="{{ route('meals.show', $meal->id) }}">
                                                 {{ $meal->name }}
                                             </a>
                                         </div>

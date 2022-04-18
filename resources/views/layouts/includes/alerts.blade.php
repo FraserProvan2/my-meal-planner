@@ -12,7 +12,10 @@
 @if ($errors->any())
     <ul class="alert alert-danger list-unstyled">
         @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
+            <li>
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                {{ $error }}
+            </li>
         @endforeach
     </ul>
 @endif

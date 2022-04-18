@@ -38,7 +38,22 @@ class MealsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255',
+            'servings' => 'required|integer',
+            'steps' => 'required',
+        ]);
+
+        $meal = new Meal();
+        $meal->name = $request->get('name');
+        $meal->servings = $request->get('servings');
+        $meal->steps = $request->get('steps');
+        $meal->user_id = Auth::id();
+        $meal->save();
+
+        return view('meals.show', [
+            'meal' => $meal
+        ])->with('success', 'Meal created! Now you can add Ingredients used');
     }
 
     /**
@@ -49,18 +64,9 @@ class MealsController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return view('meals.show', [
+            'meal' => Meal::findOrFail($id)
+        ]);
     }
 
     /**
@@ -72,7 +78,28 @@ class MealsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $meal = Meal::findOrFail($id);
+
+        if ($meal->user_id != Auth::id()) {
+            return Redirect('/meals')
+                ->with('error', 'Auth Error.');
+        }
+
+        $request->validate([
+            'name' => 'required|max:255',
+            'servings' => 'required|integer',
+            'steps' => 'required',
+        ]);
+
+        $meal->name = $request->get('name');
+        $meal->servings = $request->get('servings');
+        $meal->steps = $request->get('steps');
+        $meal->user_id = Auth::id();
+        $meal->save();
+
+        $messages = ('Meal "' . $meal->name . '" Updated!');
+        return Redirect('/meals')
+            ->with('success', $messages);
     }
 
     /**
@@ -83,6 +110,16 @@ class MealsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $meal = Meal::findOrFail($id);
+
+        if ($meal->user_id != Auth::id()) {
+            return Redirect('/meals')
+                ->with('error', 'Auth Error.');
+        }
+
+        $meal->delete();
+
+        return Redirect('/meals')
+            ->with('success', 'Meal Deleted!');
     }
 }
