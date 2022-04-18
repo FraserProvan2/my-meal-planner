@@ -5364,12 +5364,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["meal"],
   data: function data() {
     return {
       showCreateIngredient: false,
       createIngredientName: "",
       ingredientList: [],
+      mealsIngredientsList: [],
       addIngredientId: 0,
       addIngredientQty: ""
     };
@@ -5382,28 +5407,67 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("/ingredient-picker").then(function (res) {
         _this.ingredientList = res.data.reverse();
 
-        if (typeof _this.ingredientList[0] !== 'undefined') {
+        if (typeof _this.ingredientList[0] !== "undefined") {
           _this.addIngredientId = _this.ingredientList[0].id;
         }
       });
     },
-    createIngredient: function createIngredient() {
+    getMealsIngredients: function getMealsIngredients() {
       var _this2 = this;
+
+      axios.get("/meals-ingredients/" + this.meal.id).then(function (res) {
+        _this2.mealsIngredientsList = res.data;
+      });
+    },
+    createIngredient: function createIngredient() {
+      var _this3 = this;
 
       axios.post("/ingredients", {
         name: this.createIngredientName
       }).then(function () {
-        _this2.fireAlert("success", "Success", "Indredient Created.");
+        _this3.fireAlert("success", "Success", "Indredient Created.");
 
-        _this2.getIngredients();
+        _this3.getIngredients();
 
-        _this2.showCreateIngredient = false;
+        _this3.showCreateIngredient = false;
       })["catch"](function () {
-        return _this2.fireErrorAlert();
+        return _this3.fireErrorAlert();
       });
     },
     addIngredient: function addIngredient() {
-      console.log(this.addIngredientId, this.addIngredientQty); // axios.post
+      var _this4 = this;
+
+      axios.post("/ingredient-picker/add", {
+        meal_id: this.meal.id,
+        ingredient_id: this.addIngredientId,
+        qty: this.addIngredientQty
+      }).then(function (res) {
+        if (res.status == 201) {
+          _this4.fireAlert("success", "Success", "Indredient Added.");
+
+          _this4.getMealsIngredients();
+
+          _this4.reset();
+        }
+      })["catch"](function () {
+        return _this4.fireErrorAlert();
+      });
+    },
+    removeIngredient: function removeIngredient(ingredientId) {
+      var _this5 = this;
+
+      if (confirm("Are you sure you want to remove this Ingredient?")) {
+        axios.post("/ingredient-picker/remove", {
+          meal_id: this.meal.id,
+          ingredient_id: ingredientId
+        }).then(function (res) {
+          _this5.fireAlert("success", "Success", "Indredient Removed.");
+
+          _this5.getMealsIngredients();
+        })["catch"](function () {
+          return _this5.fireErrorAlert();
+        });
+      }
     },
     fireAlert: function fireAlert(type, title, text) {
       this.$notify({
@@ -5416,10 +5480,16 @@ __webpack_require__.r(__webpack_exports__);
     },
     fireErrorAlert: function fireErrorAlert() {
       this.fireAlert("error", "Error", "It looks like something has gone wrong :(");
+    },
+    reset: function reset() {
+      this.showCreateIngredient = false;
+      this.createIngredientName = "";
+      this.addIngredientQty = "";
     }
   },
   mounted: function mounted() {
     this.getIngredients();
+    this.getMealsIngredients();
   }
 });
 
@@ -28043,7 +28113,60 @@ var render = function () {
   return _c(
     "div",
     [
-      _vm._m(0),
+      _c("div", { staticClass: "card mb-3" }, [
+        _c("div", { staticClass: "card-header bg-secondary h4" }, [
+          _vm._v("Igrendients"),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          this.mealsIngredientsList.length < 1
+            ? _c("div", { staticClass: "text-muted text-center" }, [
+                _vm._v("\n        None yet! Start by adding below.\n      "),
+              ])
+            : _c(
+                "ul",
+                { staticClass: "list-group" },
+                _vm._l(this.mealsIngredientsList, function (ingredient, index) {
+                  return _c(
+                    "li",
+                    { key: index, staticClass: "list-group-item text-center" },
+                    [
+                      _c("div", { staticClass: "ml-2" }, [
+                        _c("span", { staticClass: "text-primary" }, [
+                          _vm._v(_vm._s(ingredient.qty)),
+                        ]),
+                        _vm._v(
+                          "\n            " +
+                            _vm._s(ingredient.ingredient.name) +
+                            "\n            "
+                        ),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-sm text-danger",
+                            on: {
+                              click: function ($event) {
+                                return _vm.removeIngredient(
+                                  ingredient.ingredient.id
+                                )
+                              },
+                            },
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-trash",
+                              attrs: { "aria-hidden": "true" },
+                            }),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  )
+                }),
+                0
+              ),
+        ]),
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "card mb-3" }, [
         _c("div", { staticClass: "card-header bg-secondary h4" }, [
@@ -28238,24 +28361,7 @@ var render = function () {
     1
   )
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card mb-3" }, [
-      _c("div", { staticClass: "card-header bg-secondary h4" }, [
-        _vm._v("Igrendients"),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-body" }, [
-        _c("div", { staticClass: "text-muted text-center" }, [
-          _vm._v("\n        None yet! Start by adding below.\n      "),
-        ]),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

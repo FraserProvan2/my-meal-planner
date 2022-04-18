@@ -31,6 +31,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('meals', MealsController::class);
 
     // IngredientPicker
+    Route::get('/meals-ingredients/{meal_id}', [App\Http\Controllers\IngredientPickerController::class, 'getMealsIngredients']);
     Route::get('/ingredient-picker', [App\Http\Controllers\IngredientPickerController::class, 'getIngredients']);
-    
+    Route::post('/ingredient-picker/add', [App\Http\Controllers\IngredientPickerController::class, 'addIngredient']);
+    Route::post('/ingredient-picker/remove', [App\Http\Controllers\IngredientPickerController::class, 'removeIngredient']);
 });

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Meal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class MealsController extends Controller
 {
@@ -51,9 +52,8 @@ class MealsController extends Controller
         $meal->user_id = Auth::id();
         $meal->save();
 
-        return view('meals.show', [
-            'meal' => $meal
-        ])->with('success', 'Meal created! Now you can add Ingredients used');
+        return Redirect('meals/' . $meal->id)
+            ->with('success', 'Meal created! Now you can add Ingredients used');
     }
 
     /**
@@ -98,7 +98,7 @@ class MealsController extends Controller
         $meal->save();
 
         $messages = ('Meal "' . $meal->name . '" Updated!');
-        return Redirect('/meals')
+        return Redirect('/meals/' . $meal->id)
             ->with('success', $messages);
     }
 

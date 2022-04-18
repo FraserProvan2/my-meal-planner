@@ -37,7 +37,9 @@
     </div>
 
     <div class="col-md-6 mb-3">
-        <ingredient-picker />
+        <ingredient-picker 
+            :meal="{{ $meal }}"
+        />
     </div>
 </div>
 @endsection

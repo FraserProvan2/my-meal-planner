@@ -4,9 +4,30 @@
     <div class="card mb-3">
       <div class="card-header bg-secondary h4">Igrendients</div>
       <div class="card-body">
-        <div class="text-muted text-center">
+        <div
+          v-if="this.mealsIngredientsList.length < 1"
+          class="text-muted text-center"
+        >
           None yet! Start by adding below.
         </div>
+        <ul v-else class="list-group">
+          <li
+            class="list-group-item text-center"
+            v-for="(ingredient, index) in this.mealsIngredientsList"
+            :key="index"
+          >
+            <div class="ml-2">
+              <span class="text-primary">{{ ingredient.qty }}</span>
+              {{ ingredient.ingredient.name }}
+              <button
+                class="btn btn-sm text-danger"
+                @click="removeIngredient(ingredient.ingredient.id)"
+              >
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -27,7 +48,9 @@
                   v-for="(ingredient, index) in this.ingredientList"
                   :key="index"
                   :value="ingredient.id"
-                  :selected="(addIngredientId && ingredient.id == addIngredientId)"
+                  :selected="
+                    addIngredientId && ingredient.id == addIngredientId
+                  "
                 >
                   {{ ingredient.name }}
                 </option>
@@ -102,11 +125,13 @@
 
 <script>
 export default {
+  props: ["meal"],
   data() {
     return {
       showCreateIngredient: false,
       createIngredientName: "",
       ingredientList: [],
+      mealsIngredientsList: [],
       addIngredientId: 0,
       addIngredientQty: "",
     };
@@ -114,15 +139,18 @@ export default {
   methods: {
     getIngredients() {
       this.ingredientList = [];
-      axios
-        .get("/ingredient-picker")
-        .then((res) => {
-            this.ingredientList = res.data.reverse();
+      axios.get("/ingredient-picker").then((res) => {
+        this.ingredientList = res.data.reverse();
 
-            if (typeof this.ingredientList[0] !== 'undefined') {
-                this.addIngredientId = this.ingredientList[0].id;
-            }
-        });
+        if (typeof this.ingredientList[0] !== "undefined") {
+          this.addIngredientId = this.ingredientList[0].id;
+        }
+      });
+    },
+    getMealsIngredients() {
+      axios.get("/meals-ingredients/" + this.meal.id).then((res) => {
+        this.mealsIngredientsList = res.data;
+      });
     },
     createIngredient() {
       axios
@@ -137,9 +165,34 @@ export default {
         .catch(() => this.fireErrorAlert());
     },
     addIngredient() {
-        console.log(this.addIngredientId, this.addIngredientQty);
-
-        // axios.post
+      axios
+        .post("/ingredient-picker/add", {
+          meal_id: this.meal.id,
+          ingredient_id: this.addIngredientId,
+          qty: this.addIngredientQty,
+        })
+        .then((res) => {
+          if (res.status == 201) {
+            this.fireAlert("success", "Success", "Indredient Added.");
+            this.getMealsIngredients();
+            this.reset();
+          }
+        })
+        .catch(() => this.fireErrorAlert());
+    },
+    removeIngredient(ingredientId) {
+      if (confirm("Are you sure you want to remove this Ingredient?")) {
+        axios
+          .post("/ingredient-picker/remove", {
+            meal_id: this.meal.id,
+            ingredient_id: ingredientId,
+          })
+          .then((res) => {
+            this.fireAlert("success", "Success", "Indredient Removed.");
+            this.getMealsIngredients();
+          })
+          .catch(() => this.fireErrorAlert());
+      }
     },
     fireAlert(type, title, text) {
       this.$notify({ group: "all", title, type, text, duration: 2500 });
@@ -151,9 +204,15 @@ export default {
         "It looks like something has gone wrong :("
       );
     },
+    reset() {
+      this.showCreateIngredient = false;
+      this.createIngredientName = "";
+      this.addIngredientQty = "";
+    },
   },
   mounted() {
     this.getIngredients();
+    this.getMealsIngredients();
   },
 };
 </script>

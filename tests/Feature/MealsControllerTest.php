@@ -51,7 +51,7 @@ class MealsControllerTest extends TestCase
         ];
 
         $this->post('/meals', $data)
-            ->assertStatus(200);
+            ->assertStatus(302);
 
         $this->assertDatabaseHas('meals', $data);
     }
