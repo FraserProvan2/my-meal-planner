@@ -1,0 +1,13 @@
+.vue-notification {
+    border-radius: 5.5px !important;
+}
+
+.vue-notification-group {
+    margin-top: 65px !important;
+}
+
+.vue-notification.success {
+    background: lighten($primary, 20%)!important;
+    border-color: $soft-black!important;
+    color: $soft-black!important;
+}

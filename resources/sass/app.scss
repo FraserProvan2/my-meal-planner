@@ -14,3 +14,6 @@ body {
 @import '~bootstrap/scss/bootstrap';
 @import "node_modules/bootswatch/dist/sketchy/bootswatch";
 @import './bootstrap-override';
+
+// Misc
+@import './alerts.scss';

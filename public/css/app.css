@@ -11652,3 +11652,17 @@ pre {
 .active {
   text-decoration: underline;
 }
+
+.vue-notification {
+  border-radius: 5.5px !important;
+}
+
+.vue-notification-group {
+  margin-top: 65px !important;
+}
+
+.vue-notification.success {
+  background: #aed388 !important;
+  border-color: #333333 !important;
+  color: #333333 !important;
+}
