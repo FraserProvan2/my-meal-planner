@@ -1,5 +1,8 @@
 @if(Session::has('success'))
-    <p class="alert alert-success">{{ Session::get('success') }}</p>
+    <p class="alert alert-success">
+        <i class="fa fa-lg fa-check" aria-hidden="true"></i>
+        {{ Session::get('success') }}
+    </p>
 @endif
 
 @if(Session::has('error'))

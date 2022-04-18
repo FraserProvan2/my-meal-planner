@@ -1,7 +1,8 @@
-<nav class="navbar navbar-expand-md bg-primary navbar-dark py-3 px-2 mb-4">
+<nav class="navbar navbar-expand-md bg-primary navbar-dark py-3 px-2 mb-3">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
+            <i class="fa fa-xl fa-cutlery text-dark mr-3" aria-hidden="true"></i> 
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>

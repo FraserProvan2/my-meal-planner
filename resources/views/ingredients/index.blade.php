@@ -35,7 +35,7 @@
                                 </tr>
                             @endforeach
                         @else
-                            <div class="text-center text-danger mt-4 mb-3">No Ingredients Found!</div>
+                            @include('layouts.includes.missing-notice', ['label' => 'Ingredients'])
                         @endif
                     </tbody>
                 </table>

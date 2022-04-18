@@ -52,7 +52,7 @@
                                 </tr>
                             @endforeach
                         @else
-                            <div class="text-center text-danger mt-4 mb-3">No meals Found!</div>
+                            @include('layouts.includes.missing-notice', ['label' => 'Meals'])
                         @endif
                     </tbody>
                 </table>
