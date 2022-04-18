@@ -5268,9 +5268,83 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
+  data: function data() {
+    return {
+      showCreateIngredient: false
+    };
   }
 });
 
@@ -27883,9 +27957,150 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    Hello\n")])
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "card mb-3" }, [
+      _c("div", { staticClass: "card-header bg-secondary h4" }, [
+        _vm._v("Add Igrendient"),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
+        !this.showCreateIngredient
+          ? _c("div", { staticClass: "form-group mt-2" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-secondary form-control",
+                  on: {
+                    click: function ($event) {
+                      _vm.showCreateIngredient = true
+                    },
+                  },
+                },
+                [_vm._v("\n          Create New Ingredient\n        ")]
+              ),
+            ])
+          : _vm._e(),
+      ]),
+    ]),
+    _vm._v(" "),
+    this.showCreateIngredient
+      ? _c("div", { staticClass: "card mb-3" }, [
+          _c("div", { staticClass: "card-header bg-secondary h4" }, [
+            _vm._v("Create New Igrendient"),
+          ]),
+          _vm._v(" "),
+          _vm._m(3),
+        ])
+      : _vm._e(),
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card mb-3" }, [
+      _c("div", { staticClass: "card-header bg-secondary h4" }, [
+        _vm._v("Igrendients"),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "text-muted text-center" }, [
+          _vm._v("\n        None yet! Start by adding below.\n      "),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-8" }, [
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "select-ingredient" } }, [
+            _vm._v("Select Ingredient"),
+          ]),
+          _vm._v(" "),
+          _c(
+            "select",
+            { staticClass: "form-control", attrs: { id: "select-ingredient" } },
+            [
+              _c("option", [_vm._v("1")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("2")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("3")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("4")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("5")]),
+            ]
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-4" }, [
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "qty" } }, [_vm._v("Qty")]),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", placeholder: "1, 400g", name: "qty" },
+          }),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group mt-2" }, [
+      _c("button", { staticClass: "btn btn-primary form-control" }, [
+        _vm._v("Add Ingredient"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body" }, [
+      _c("div", { staticClass: "form-group" }, [
+        _c("label", { attrs: { for: "ingredientName" } }, [
+          _vm._v("Ingredient Name"),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-control",
+          attrs: {
+            type: "input",
+            id: "ingredientName",
+            placeholder: "Red Pepper",
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group mt-2" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary form-control",
+            attrs: { type: "submit" },
+          },
+          [_vm._v("\n          Create Ingredient\n        ")]
+        ),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 

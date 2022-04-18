@@ -5,7 +5,7 @@
 <h1>Meals</h1>
 
 <div class="row justify-content-center">
-    <div class="col-md-7 mb-3">
+    <div class="col-md-6 mb-3">
         <div class="card">
             <div class="card-header bg-secondary h4">{{ __('Update Meal Details') }}</div>
             <div class="card-body"> 
@@ -36,13 +36,8 @@
         </div>
     </div>
 
-    <div class="col-md-5 mb-3">
-        <div class="card">
-            <div class="card-header bg-secondary h4">{{ __('Ingredients Used') }}</div>
-            <div class="card-body"> 
-                <ingredient-picker />
-            </div>
-        </div>
+    <div class="col-md-6 mb-3">
+        <ingredient-picker />
     </div>
 </div>
 @endsection
