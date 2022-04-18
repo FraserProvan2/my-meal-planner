@@ -12,13 +12,13 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
                 <a 
-                    class="nav-item nav-link {{ request()->routeIs('ingredients.*') ? 'active' : '' }}" 
-                    href="{{ url('/ingredients') }}"
-                >{{ __('Ingredients') }}</a>
-                <a 
                     class="nav-item nav-link {{ request()->routeIs('meals.*') ? 'active' : '' }}" 
                     href="{{ url('/meals') }}"
                 >{{ __('Meals') }}</a>
+                <a 
+                    class="nav-item nav-link {{ request()->routeIs('ingredients.*') ? 'active' : '' }}" 
+                    href="{{ url('/ingredients') }}"
+                >{{ __('Ingredients') }}</a>
             </ul>
 
             <!-- Right Side Of Navbar -->
