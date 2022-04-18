@@ -40,7 +40,7 @@
         <div class="card">
             <div class="card-header bg-secondary h4">{{ __('Ingredients Used') }}</div>
             <div class="card-body"> 
-                d
+                <ingredient-picker />
             </div>
         </div>
     </div>
