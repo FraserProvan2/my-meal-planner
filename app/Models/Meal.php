@@ -26,7 +26,8 @@ class Meal extends Model
             try {
                 $ingredients[] = [
                     'ingredient' => Ingredient::find($link->ingredient_id),
-                    'qty' => $link->qty
+                    'qty' => $link->qty,
+                    'link_id' => $link->id
                 ];
                 
             } catch (Exception $e) {

@@ -80,6 +80,7 @@ class IngredientPickerController extends Controller
         $request->validate([
             'meal_id' => 'required|integer',
             'ingredient_id' => 'required|integer',
+            'link_id' => 'required|integer'
         ]);
 
         $meal = Meal::findOrFail($request->get('meal_id'));
@@ -89,7 +90,8 @@ class IngredientPickerController extends Controller
         }
 
         $link = MealHasIngredient::where('meal_id', $request->get('meal_id'))
-            ->where('ingredient_id', $request->get('ingredient_id'));
+            ->where('ingredient_id', $request->get('ingredient_id'))
+            ->where('id', $request->get('link_id'));
         
         if (!$link) {
             return new JsonResponse('Failed to find Ingreident', 400);

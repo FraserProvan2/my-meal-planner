@@ -5453,13 +5453,14 @@ __webpack_require__.r(__webpack_exports__);
         return _this4.fireErrorAlert();
       });
     },
-    removeIngredient: function removeIngredient(ingredientId) {
+    removeIngredient: function removeIngredient(ingredientId, linkId) {
       var _this5 = this;
 
       if (confirm("Are you sure you want to remove this Ingredient?")) {
         axios.post("/ingredient-picker/remove", {
           meal_id: this.meal.id,
-          ingredient_id: ingredientId
+          ingredient_id: ingredientId,
+          link_id: linkId
         }).then(function (res) {
           _this5.fireAlert("success", "Success", "Indredient Removed.");
 
@@ -28147,7 +28148,8 @@ var render = function () {
                             on: {
                               click: function ($event) {
                                 return _vm.removeIngredient(
-                                  ingredient.ingredient.id
+                                  ingredient.ingredient.id,
+                                  ingredient.link_id
                                 )
                               },
                             },

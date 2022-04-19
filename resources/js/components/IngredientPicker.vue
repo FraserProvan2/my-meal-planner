@@ -21,7 +21,7 @@
               {{ ingredient.ingredient.name }}
               <button
                 class="btn btn-sm text-danger"
-                @click="removeIngredient(ingredient.ingredient.id)"
+                @click="removeIngredient(ingredient.ingredient.id, ingredient.link_id)"
               >
                 <i class="fa fa-trash" aria-hidden="true"></i>
               </button>
@@ -180,12 +180,13 @@ export default {
         })
         .catch(() => this.fireErrorAlert());
     },
-    removeIngredient(ingredientId) {
+    removeIngredient(ingredientId, linkId) {
       if (confirm("Are you sure you want to remove this Ingredient?")) {
         axios
           .post("/ingredient-picker/remove", {
             meal_id: this.meal.id,
             ingredient_id: ingredientId,
+            link_id: linkId,
           })
           .then((res) => {
             this.fireAlert("success", "Success", "Indredient Removed.");
