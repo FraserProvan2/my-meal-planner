@@ -103,7 +103,7 @@ class IngredientPickerControllerTest extends TestCase
     }
 
     /** @test */
-    public function non_author_can_remove_ingredient()
+    public function non_author_cant_remove_ingredient()
     {
         $this->seedDatabase();
         $this->actingAs(User::find(2))->assertAuthenticated();
