@@ -8,7 +8,6 @@ use App\Models\MealHasIngredient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Response;
 
 class IngredientPickerController extends Controller
 {
