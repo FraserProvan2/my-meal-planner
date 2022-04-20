@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\IngredientsController;
 use App\Http\Controllers\MealsController;
+use App\Http\Controllers\PlanTemplateController;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -35,4 +36,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/ingredient-picker', [App\Http\Controllers\IngredientPickerController::class, 'getIngredients']);
     Route::post('/ingredient-picker/add', [App\Http\Controllers\IngredientPickerController::class, 'addIngredient']);
     Route::post('/ingredient-picker/remove', [App\Http\Controllers\IngredientPickerController::class, 'removeIngredient']);
+
+    // Plan Template
+    Route::resource('plan-template', PlanTemplateController::class);
 });

@@ -12,7 +12,9 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
                 <a 
-                    class="nav-item nav-link {{ request()->routeIs('home') ? 'active' : '' }}" 
+                    class="nav-item nav-link {{ 
+                        (request()->routeIs('home') || request()->routeIs('plan-template.create')) ? 'active' : '' 
+                    }}" 
                     href="{{ url('/') }}"
                 >{{ __('MyPlan') }}</a>
                 <a 

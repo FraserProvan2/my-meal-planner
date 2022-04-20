@@ -13,7 +13,7 @@
             </div>
             <div class="mx-1"></div>
             <div class="w-100 mb-2">
-                <a href="" class="btn btn-secondary w-100">Edit Plan Template</a>
+                <a href="{{ route('plan-template.create') }}" class="btn btn-secondary w-100">Edit Plan Template</a>
             </div>
         </div>
     </div>
