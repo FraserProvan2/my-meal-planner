@@ -12,6 +12,10 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
                 <a 
+                    class="nav-item nav-link {{ request()->routeIs('home') ? 'active' : '' }}" 
+                    href="{{ url('/') }}"
+                >{{ __('MyPlan') }}</a>
+                <a 
                     class="nav-item nav-link {{ request()->routeIs('meals.*') ? 'active' : '' }}" 
                     href="{{ url('/meals') }}"
                 >{{ __('Meals') }}</a>

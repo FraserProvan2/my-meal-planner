@@ -7,7 +7,7 @@
         <h1>Meals</h1>
     </div>
     <div class="d-flex flex-grow-1 justify-content-end">
-        <a href="{{ route('meals.create') }}" class="btn btn-success border-dark mb-2 px-5">Add New</a>
+        <a href="{{ route('meals.create') }}" class="btn btn-success mb-2 px-5">Add New</a>
     </div>
 </div>
 

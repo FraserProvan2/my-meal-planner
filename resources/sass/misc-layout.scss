@@ -1,0 +1,18 @@
+.title-and-buttons {
+    display: flex;
+
+    @media only screen and (max-width: 992px) {
+        display: inherit;
+    }
+}
+
+.generate-meal-plan-menu {
+    display: flex;
+    flex-grow: 1;
+    max-width: 46%;
+    
+    @media only screen and (max-width: 992px) {
+        max-width: 100%;
+        flex-direction: column;
+    }
+}

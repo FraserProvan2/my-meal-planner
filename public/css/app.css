@@ -11666,3 +11666,24 @@ pre {
   border-color: #333333 !important;
   color: #333333 !important;
 }
+
+.title-and-buttons {
+  display: flex;
+}
+@media only screen and (max-width: 992px) {
+  .title-and-buttons {
+    display: inherit;
+  }
+}
+
+.generate-meal-plan-menu {
+  display: flex;
+  flex-grow: 1;
+  max-width: 46%;
+}
+@media only screen and (max-width: 992px) {
+  .generate-meal-plan-menu {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
