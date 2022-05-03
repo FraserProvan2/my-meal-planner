@@ -26,6 +26,7 @@ class PlanTemplate extends Model
             $plan_template = new Self();
             $plan_template->user_id = $user_id;
             $plan_template->template = $default;
+            $plan_template->save();
         }
        
         return $plan_template;

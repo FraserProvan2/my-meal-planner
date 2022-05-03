@@ -27,4 +27,19 @@ class HomeControllerTest extends TestCase
         $this->get('/')
             ->assertStatus(200);
     }
+
+    /** @test */
+    public function has_template_plan_on_page_hit()
+    {
+        $this->seedDatabase();
+        $this->actingAs(User::find(1))->assertAuthenticated();
+
+        $this->get('/')
+            ->assertStatus(200);
+
+        $this->assertDatabaseHas('plan_templates', [
+            'id' => 1,
+            'user_id' => 1,
+        ]);
+    }
 }
