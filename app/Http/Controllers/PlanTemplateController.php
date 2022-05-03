@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PlanTemplate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PlanTemplateController extends Controller
 {
@@ -13,7 +15,9 @@ class PlanTemplateController extends Controller
      */
     public function create()
     {
-        return view('plan-template.create');
+        return view('plan-template.create', [
+            'template' => PlanTemplate::getAndOrCreate(Auth::id())
+        ]);
     }
 
     /**

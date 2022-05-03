@@ -9,7 +9,7 @@
         <div class="card">
           
             <div class="card-body">
-                wef
+                {{ $template }}
             </div>
         </div>
     </div>
