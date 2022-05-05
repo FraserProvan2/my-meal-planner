@@ -9,7 +9,7 @@
         <div class="card">
           
             <div class="card-body">
-                {{ $template }}
+                {{ json_encode($template) }}
             </div>
         </div>
     </div>

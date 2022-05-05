@@ -20,15 +20,40 @@ class PlanTemplate extends Model
     {
         $plan_template = Self::where('user_id', $user_id)->first();
         if (!$plan_template) {
-            $path = storage_path() . "/json/default-template.json";
-            $default = json_encode(file_get_contents($path));
-
             $plan_template = new Self();
             $plan_template->user_id = $user_id;
-            $plan_template->template = $default;
+            $plan_template->template = json_encode(Self::getDefaultTemplate());
             $plan_template->save();
         }
-       
+
         return $plan_template;
+    }
+
+    /**
+     * Get template as json
+     * 
+     * @return Json template
+     */
+    public function getTemplateJson()
+    {
+        return json_decode($this->template);
+    }
+
+    /**
+     * Returns default plan template
+     * 
+     * @return Array
+     */
+    private static function getDefaultTemplate()
+    {
+        return [
+            "monday"    => ["breakfast" => null, "lunch" => null, "dinner" => null],
+            "tuesday"   => ["breakfast" => null, "lunch" => null, "dinner" => null],
+            "wednesday" => ["breakfast" => null, "lunch" => null, "dinner" => null],
+            "thursday"  => ["breakfast" => null, "lunch" => null, "dinner" => null],
+            "friday"    => ["breakfast" => null, "lunch" => null, "dinner" => null],
+            "saturday"  => ["breakfast" => null, "lunch" => null, "dinner" => null],
+            "sunday"    => ["breakfast" => null, "lunch" => null, "dinner" => null],
+        ];
     }
 }

@@ -14,7 +14,6 @@
             <div class="mx-1"></div>
             <div class="w-100 mb-2">
                 <a href="{{ route('plan-template.create') }}" class="btn btn-secondary w-100">Edit Plan Template</a>
-                {{ $template }}
             </div>
         </div>
     </div>

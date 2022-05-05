@@ -15,8 +15,11 @@ class PlanTemplateController extends Controller
      */
     public function create()
     {
+        $template = PlanTemplate::getAndOrCreate(Auth::id())
+            ->getTemplateJson();
+
         return view('plan-template.create', [
-            'template' => PlanTemplate::getAndOrCreate(Auth::id())
+            'template' => $template
         ]);
     }
 
