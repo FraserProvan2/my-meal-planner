@@ -25,6 +25,7 @@ Vue.use(Notifications);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('ingredient-picker', require('./components/IngredientPicker.vue').default);
+Vue.component('plan-template-editor', require('./components/PlanTemplateEditor.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
