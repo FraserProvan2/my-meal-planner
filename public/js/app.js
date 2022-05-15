@@ -28868,7 +28868,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.monday.breakfast
                       ? _c(
@@ -28907,7 +28907,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.tuesday.breakfast
                       ? _c(
@@ -28946,7 +28946,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.wednesday.breakfast
                       ? _c(
@@ -28985,7 +28985,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.thursday.breakfast
                       ? _c(
@@ -29024,7 +29024,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.friday.breakfast
                       ? _c(
@@ -29063,7 +29063,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.saturday.breakfast
                       ? _c(
@@ -29102,7 +29102,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.sunday.breakfast
                       ? _c(
@@ -29143,7 +29143,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.monday.lunch
                       ? _c(
@@ -29174,7 +29174,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.tuesday.lunch
                       ? _c(
@@ -29209,7 +29209,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.wednesday.lunch
                       ? _c(
@@ -29248,7 +29248,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.thursday.lunch
                       ? _c(
@@ -29283,7 +29283,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.friday.lunch
                       ? _c(
@@ -29318,7 +29318,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.saturday.lunch
                       ? _c(
@@ -29353,7 +29353,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.sunday.lunch
                       ? _c(
@@ -29390,7 +29390,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.monday.dinner
                       ? _c(
@@ -29425,7 +29425,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.tuesday.dinner
                       ? _c(
@@ -29464,7 +29464,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.wednesday.dinner
                       ? _c(
@@ -29503,7 +29503,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.thursday.dinner
                       ? _c(
@@ -29538,7 +29538,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.friday.dinner
                       ? _c(
@@ -29573,7 +29573,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.saturday.dinner
                       ? _c(
@@ -29608,7 +29608,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("Enabled")]
+                          [_vm._v(" Enabled")]
                         )
                       : !this.templateMemory.sunday.dinner
                       ? _c(

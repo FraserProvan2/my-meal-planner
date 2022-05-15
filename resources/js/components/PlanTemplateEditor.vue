@@ -21,7 +21,7 @@
                 v-if="this.templateMemory.monday.breakfast"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('monday', 'breakfast', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.monday.breakfast"
                 class="btn btn-danger text-white plan-template-btn"
@@ -35,7 +35,7 @@
                 v-if="this.templateMemory.tuesday.breakfast"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('tuesday', 'breakfast', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.tuesday.breakfast"
                 class="btn btn-danger text-white plan-template-btn"
@@ -49,7 +49,7 @@
                 v-if="this.templateMemory.wednesday.breakfast"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('wednesday', 'breakfast', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.wednesday.breakfast"
                 class="btn btn-danger text-white plan-template-btn"
@@ -63,7 +63,7 @@
                 v-if="this.templateMemory.thursday.breakfast"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('thursday', 'breakfast', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.thursday.breakfast"
                 class="btn btn-danger text-white plan-template-btn"
@@ -77,7 +77,7 @@
                 v-if="this.templateMemory.friday.breakfast"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('friday', 'breakfast', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.friday.breakfast"
                 class="btn btn-danger text-white plan-template-btn"
@@ -91,7 +91,7 @@
                 v-if="this.templateMemory.saturday.breakfast"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('saturday', 'breakfast', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.saturday.breakfast"
                 class="btn btn-danger text-white plan-template-btn"
@@ -105,7 +105,7 @@
                 v-if="this.templateMemory.sunday.breakfast"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('sunday', 'breakfast', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.sunday.breakfast"
                 class="btn btn-danger text-white plan-template-btn"
@@ -123,7 +123,7 @@
                 v-if="this.templateMemory.monday.lunch"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('monday', 'lunch', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.monday.lunch"
                 class="btn btn-danger text-white plan-template-btn"
@@ -137,7 +137,7 @@
                 v-if="this.templateMemory.tuesday.lunch"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('tuesday', 'lunch', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.tuesday.lunch"
                 class="btn btn-danger text-white plan-template-btn"
@@ -151,7 +151,7 @@
                 v-if="this.templateMemory.wednesday.lunch"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('wednesday', 'lunch', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.wednesday.lunch"
                 class="btn btn-danger text-white plan-template-btn"
@@ -165,7 +165,7 @@
                 v-if="this.templateMemory.thursday.lunch"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('thursday', 'lunch', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.thursday.lunch"
                 class="btn btn-danger text-white plan-template-btn"
@@ -179,7 +179,7 @@
                 v-if="this.templateMemory.friday.lunch"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('friday', 'lunch', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.friday.lunch"
                 class="btn btn-danger text-white plan-template-btn"
@@ -193,7 +193,7 @@
                 v-if="this.templateMemory.saturday.lunch"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('saturday', 'lunch', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.saturday.lunch"
                 class="btn btn-danger text-white plan-template-btn"
@@ -207,7 +207,7 @@
                 v-if="this.templateMemory.sunday.lunch"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('sunday', 'lunch', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.sunday.lunch"
                 class="btn btn-danger text-white plan-template-btn"
@@ -225,7 +225,7 @@
                 v-if="this.templateMemory.monday.dinner"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('monday', 'dinner', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.monday.dinner"
                 class="btn btn-danger text-white plan-template-btn"
@@ -239,7 +239,7 @@
                 v-if="this.templateMemory.tuesday.dinner"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('tuesday', 'dinner', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.tuesday.dinner"
                 class="btn btn-danger text-white plan-template-btn"
@@ -253,7 +253,7 @@
                 v-if="this.templateMemory.wednesday.dinner"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('wednesday', 'dinner', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.wednesday.dinner"
                 class="btn btn-danger text-white plan-template-btn"
@@ -267,7 +267,7 @@
                 v-if="this.templateMemory.thursday.dinner"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('thursday', 'dinner', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.thursday.dinner"
                 class="btn btn-danger text-white plan-template-btn"
@@ -281,7 +281,7 @@
                 v-if="this.templateMemory.friday.dinner"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('friday', 'dinner', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.friday.dinner"
                 class="btn btn-danger text-white plan-template-btn"
@@ -295,7 +295,7 @@
                 v-if="this.templateMemory.saturday.dinner"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('saturday', 'dinner', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.saturday.dinner"
                 class="btn btn-danger text-white plan-template-btn"
@@ -309,7 +309,7 @@
                 v-if="this.templateMemory.sunday.dinner"
                 class="btn btn-primary plan-template-btn"
                 @click="() => updateMealSlot('sunday', 'dinner', 0)"
-            >Enabled</button>
+            >&nbsp;Enabled</button>
             <button 
                 v-else-if="!this.templateMemory.sunday.dinner"
                 class="btn btn-danger text-white plan-template-btn"
