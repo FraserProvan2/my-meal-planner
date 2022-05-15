@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class PlanTemplate extends Model
 {
+    protected $fillable = ['user_id', 'template'];
+
     use HasFactory;
 
     /**
@@ -44,7 +46,7 @@ class PlanTemplate extends Model
      * 
      * @return Array
      */
-    private static function getDefaultTemplate()
+    public static function getDefaultTemplate()
     {
         return [
             "monday"    => ["breakfast" => 0, "lunch" => 1, "dinner" => 1],
