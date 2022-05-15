@@ -5619,10 +5619,237 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['template'],
+  data: function data() {
+    return {
+      templateMemory: false
+    };
+  },
+  methods: {
+    updateMealSlot: function updateMealSlot(day, meal, toUpdateTo) {
+      this.templateMemory[day][meal] = toUpdateTo;
+      this.updatePlan();
+    },
+    updatePlan: function updatePlan() {
+      console.log(this.templateMemory);
+    }
+  },
   mounted: function mounted() {
-    console.log(this.template);
+    this.templateMemory = JSON.parse(this.template);
   }
 });
 
@@ -28591,197 +28818,774 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "table-responsive" }, [
+    _c(
+      "table",
+      { staticClass: "table table-light table-borderless text-center mb-0" },
+      [
+        this.templateMemory
+          ? _c("tbody", [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", { staticClass: "bg-secondary align-middle" }, [
+                  _vm._v("Breakfast"),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.monday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "monday",
+                                "breakfast",
+                                0
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.monday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "monday",
+                                "breakfast",
+                                1
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.tuesday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "tuesday",
+                                "breakfast",
+                                0
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.tuesday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "tuesday",
+                                "breakfast",
+                                1
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.wednesday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "wednesday",
+                                "breakfast",
+                                0
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.wednesday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "wednesday",
+                                "breakfast",
+                                1
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.thursday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "thursday",
+                                "breakfast",
+                                0
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.thursday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "thursday",
+                                "breakfast",
+                                1
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.friday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "friday",
+                                "breakfast",
+                                0
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.friday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "friday",
+                                "breakfast",
+                                1
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.saturday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "saturday",
+                                "breakfast",
+                                0
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.saturday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "saturday",
+                                "breakfast",
+                                1
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.sunday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "sunday",
+                                "breakfast",
+                                0
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.sunday.breakfast
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "sunday",
+                                "breakfast",
+                                1
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", { staticClass: "bg-secondary align-middle" }, [
+                  _vm._v("Lunch"),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.monday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("monday", "lunch", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.monday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("monday", "lunch", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.tuesday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("tuesday", "lunch", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.tuesday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("tuesday", "lunch", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.wednesday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("wednesday", "lunch", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.wednesday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("wednesday", "lunch", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.thursday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("thursday", "lunch", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.thursday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("thursday", "lunch", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.friday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("friday", "lunch", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.friday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("friday", "lunch", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.saturday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("saturday", "lunch", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.saturday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("saturday", "lunch", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.sunday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("sunday", "lunch", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.sunday.lunch
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("sunday", "lunch", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", { staticClass: "bg-secondary align-middle" }, [
+                  _vm._v("Dinner"),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.monday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("monday", "dinner", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.monday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("monday", "dinner", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.tuesday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("tuesday", "dinner", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.tuesday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("tuesday", "dinner", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.wednesday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "wednesday",
+                                "dinner",
+                                0
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.wednesday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot(
+                                "wednesday",
+                                "dinner",
+                                1
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.thursday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("thursday", "dinner", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.thursday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("thursday", "dinner", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.friday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("friday", "dinner", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.friday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("friday", "dinner", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.saturday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("saturday", "dinner", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.saturday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("saturday", "dinner", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  this.templateMemory.sunday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("sunday", "dinner", 0)
+                            },
+                          },
+                        },
+                        [_vm._v("Enabled")]
+                      )
+                    : !this.templateMemory.sunday.dinner
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-danger text-white plan-template-btn",
+                          on: {
+                            click: function () {
+                              return _vm.updateMealSlot("sunday", "dinner", 1)
+                            },
+                          },
+                        },
+                        [_vm._v("Disabled")]
+                      )
+                    : _vm._e(),
+                ]),
+              ]),
+            ])
+          : _vm._e(),
+      ]
+    ),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "table-responsive" }, [
-      _c(
-        "table",
-        { staticClass: "table table-light table-borderless text-center mb-0" },
-        [
-          _c("tbody", [
-            _c("tr", [
-              _c("td", { staticClass: "bg-primary text-white" }),
-              _vm._v(" "),
-              _c("td", { staticClass: "bg-primary text-white" }, [
-                _vm._v("Monday"),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "bg-primary text-white" }, [
-                _vm._v("Tuesday"),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "bg-primary text-white" }, [
-                _vm._v("Wednesday"),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "bg-primary text-white" }, [
-                _vm._v("Thursday"),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "bg-primary text-white" }, [
-                _vm._v("Friday"),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "bg-primary text-white" }, [
-                _vm._v("Saturday"),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "bg-primary text-white" }, [
-                _vm._v("Sunday"),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", { staticClass: "bg-secondary align-middle" }, [
-                _vm._v("Breakfast"),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", { staticClass: "bg-secondary align-middle" }, [
-                _vm._v("Lunch"),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", { staticClass: "bg-secondary align-middle" }, [
-                _vm._v("Dinner"),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-1" }, [
-                _c("button", { staticClass: "btn plan-template-btn" }, [
-                  _vm._v("Enabled"),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]
-      ),
+    return _c("tr", [
+      _c("td", { staticClass: "bg-primary text-white" }),
+      _vm._v(" "),
+      _c("td", { staticClass: "bg-primary text-white" }, [_vm._v("Monday")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "bg-primary text-white" }, [_vm._v("Tuesday")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "bg-primary text-white" }, [_vm._v("Wednesday")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "bg-primary text-white" }, [_vm._v("Thursday")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "bg-primary text-white" }, [_vm._v("Friday")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "bg-primary text-white" }, [_vm._v("Saturday")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "bg-primary text-white" }, [_vm._v("Sunday")]),
     ])
   },
 ]
