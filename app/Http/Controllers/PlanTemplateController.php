@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PlanTemplate;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,51 +32,16 @@ class PlanTemplateController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'template' => 'required|json',
+        ]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+        $plan_template = PlanTemplate::where('user_id', Auth::id())
+            ->firstOrFail();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+        $plan_template->template = $request->get('template');
+        $plan_template->save();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return new JsonResponse('Plan Template Saved', 200);
     }
 }

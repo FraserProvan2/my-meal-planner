@@ -320,6 +320,8 @@
         </tr>
       </tbody>
     </table>
+
+    <notifications group="all" />
   </div>
 </template>
 
@@ -337,8 +339,15 @@ export default {
             this.updatePlan();
         },
         updatePlan() {
-            console.log(this.templateMemory);
-        }
+            axios.post('/plan-template', {
+                template: JSON.stringify(this.templateMemory)
+            }).catch(() => {
+                this.fireAlert("error", "Error", "It looks like something has gone wrong :(");
+            });
+        },
+        fireAlert(type, title, text) {
+            this.$notify({ group: "all", title, type, text, duration: 2500 });
+        },
     },
     mounted() {
         this.templateMemory = JSON.parse(this.template);

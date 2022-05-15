@@ -47,13 +47,13 @@ class PlanTemplate extends Model
     private static function getDefaultTemplate()
     {
         return [
-            "monday"    => ["breakfast" => 1, "lunch" => 1, "dinner" => 1],
-            "tuesday"   => ["breakfast" => 1, "lunch" => 1, "dinner" => 1],
-            "wednesday" => ["breakfast" => 1, "lunch" => 1, "dinner" => 1],
-            "thursday"  => ["breakfast" => 1, "lunch" => 1, "dinner" => 1],
-            "friday"    => ["breakfast" => 1, "lunch" => 1, "dinner" => 1],
-            "saturday"  => ["breakfast" => 1, "lunch" => 1, "dinner" => 1],
-            "sunday"    => ["breakfast" => 1, "lunch" => 1, "dinner" => 1],
+            "monday"    => ["breakfast" => 0, "lunch" => 1, "dinner" => 1],
+            "tuesday"   => ["breakfast" => 0, "lunch" => 1, "dinner" => 1],
+            "wednesday" => ["breakfast" => 0, "lunch" => 1, "dinner" => 1],
+            "thursday"  => ["breakfast" => 0, "lunch" => 1, "dinner" => 1],
+            "friday"    => ["breakfast" => 0, "lunch" => 1, "dinner" => 1],
+            "saturday"  => ["breakfast" => 0, "lunch" => 1, "dinner" => 1],
+            "sunday"    => ["breakfast" => 0, "lunch" => 1, "dinner" => 1],
         ];
     }
 }
