@@ -39,4 +39,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Plan Template
     Route::resource('plan-template', PlanTemplateController::class);
+
+    // Generate Meal
+    Route::get('/meal-plan/generate', [App\Http\Controllers\GenerateMealController::class, 'update'])->name('generate-meal-plan');
 });

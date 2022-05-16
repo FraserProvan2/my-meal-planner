@@ -135,12 +135,4 @@ class MealsController extends Controller
         return Redirect('/meals')
             ->with('success', 'Meal Deleted!');
     }
-
-    // /**
-    //  * 
-    //  */
-    // private function updateAllowedMealSlots(Request $request)
-    // {
-    //     dd($request);
-    // }
 }
