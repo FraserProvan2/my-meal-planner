@@ -22,10 +22,9 @@
 <div class="row justify-content-center">
     <div class="col-md-12 mb-3">
         <div class="card">
-            <div class="card-body">
+            <div class="card-body p-0">
                 @if($plan)
-                    {{-- TODO: Vue component to show meals here (based on plan template picker) --}}
-                    {{ json_encode($plan) }}
+                    <meal-plan plan="{{ json_encode($plan) }}" />
                 @else
                     <div class="text-center">
                         <div class="pt-5">

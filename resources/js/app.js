@@ -26,6 +26,7 @@ Vue.use(Notifications);
 
 Vue.component('ingredient-picker', require('./components/IngredientPicker.vue').default);
 Vue.component('plan-template-editor', require('./components/PlanTemplateEditor.vue').default);
+Vue.component('meal-plan', require('./components/MealPlan.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

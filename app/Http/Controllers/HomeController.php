@@ -29,6 +29,8 @@ class HomeController extends Controller
         $plan = MealPlan::where('user_id', Auth::id())->first();
         if (!$plan) {
             $plan = null;
+        } else{
+            $plan = $plan->withMealData();
         }
 
         return view('home', [
