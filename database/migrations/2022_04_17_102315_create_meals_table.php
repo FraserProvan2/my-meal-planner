@@ -19,6 +19,9 @@ class CreateMealsTable extends Migration
             $table->string('name');
             $table->longText('steps');
             $table->integer('servings');
+            $table->boolean('in_breakfast')->default(0);
+            $table->boolean('in_lunch')->default(1);
+            $table->boolean('in_dinner')->default(1);
             $table->timestamps();
 
             $table->foreign('user_id')

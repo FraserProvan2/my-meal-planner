@@ -30,6 +30,22 @@
                         <option {{ ($meal->servings == 5) ? 'selected' : '' }}>5</option>
                         </select>
                     </div>
+
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="in-breakfast" name="in_breakfast" {{ ($meal->in_breakfast == 1 ? ' checked' : '') }}>
+                        <label class="form-check-label" for="in-breakfast">Allow in Breakfast</label>
+                    </div>
+
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="in-lunch" name="in_lunch" {{ ($meal->in_lunch == 1 ? ' checked' : '') }}>
+                        <label class="form-check-label" for="in-lunch">Allow in Lunch</label>
+                    </div>
+
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="in-dinner" name="in_dinner" {{ ($meal->in_dinner == 1 ? ' checked' : '') }}>
+                        <label class="form-check-label" for="in-dinner">Allow in Dinner</label>
+                    </div>
+
                     <button type="submit" class="btn btn-primary w-100">Update Details</button>
                 </form>
             </div>
