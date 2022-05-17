@@ -41,12 +41,10 @@ class MealsController extends Controller
     {
         $request->validate([
             'name' => 'required|max:255',
-            'servings' => 'required|integer',
         ]);
 
         $meal = new Meal();
         $meal->name = $request->get('name');
-        $meal->servings = $request->get('servings');
         $meal->steps = $request->get('steps');
         $meal->user_id = Auth::id();
         $meal->save();
@@ -86,11 +84,9 @@ class MealsController extends Controller
 
         $request->validate([
             'name' => 'required|max:255',
-            'servings' => 'required|integer',
         ]);
 
         $meal->name = $request->get('name');
-        $meal->servings = $request->get('servings');
         $meal->steps = $request->get('steps');
         $meal->user_id = Auth::id();
 

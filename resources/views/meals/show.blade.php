@@ -20,16 +20,6 @@
                         <label for="steps">Cooking Steps</label>
                         <textarea class="form-control" id="steps" rows="8" name="steps">{{ $meal->steps }}</textarea>
                     </div>
-                    <div class="form-group mb-2">
-                        <label for="servings">Servings</label>
-                        <select class="form-control" id="sevings" name="servings">
-                        <option {{ ($meal->servings == 1) ? 'selected' : '' }}>1</option>
-                        <option {{ ($meal->servings == 2) ? 'selected' : '' }}>2</option>
-                        <option {{ ($meal->servings == 3) ? 'selected' : '' }}>3</option>
-                        <option {{ ($meal->servings == 4) ? 'selected' : '' }}>4</option>
-                        <option {{ ($meal->servings == 5) ? 'selected' : '' }}>5</option>
-                        </select>
-                    </div>
 
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="in-breakfast" name="in_breakfast" {{ ($meal->in_breakfast == 1 ? ' checked' : '') }}>

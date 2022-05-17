@@ -29,7 +29,6 @@ class PlanGenerator
                 }
 
                 $selected_meal = array_shift($meals[$meal_name]);
-                
                 if (isset($selected_meal->id)) {
                     $plan_template[$day][$meal_name] = $selected_meal->id;
                 }

@@ -19,31 +19,26 @@ class MealsSeeder extends Seeder
             [ 
                 'name' => 'Pasta & Meatballs', 
                 'user_id' => 1,
-                'servings' => 2,
                 'steps' => 'lorem ipsum'
             ],
             [ 
                 'name' => 'Yellow & Red Pepper Mix', 
                 'user_id' => 1,
-                'servings' => 1,
                 'steps' => 'lorem ipsum'
             ],
             [ 
                 'name' => 'Pasta with Red Pepper', 
                 'user_id' => 1,
-                'servings' => 1,
                 'steps' => 'lorem ipsum'
             ],
             [ 
                 'name' => 'Pasta with Yellow Pepper', 
                 'user_id' => 1,
-                'servings' => 1,
                 'steps' => 'lorem ipsum'
             ],
             [ 
                 'name' => 'Penne Pasta on its own with nothing', 
                 'user_id' => 1,
-                'servings' => 1,
                 'steps' => 'lorem ipsum'
             ]
         ];

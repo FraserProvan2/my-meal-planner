@@ -27,12 +27,6 @@
                                             </a>
                                         </div>
                                     </th>
-                                    <th scope="row">
-                                        <div class="pt-1">
-                                            {{ $meal->servings }} 
-                                            <small class="text-muted">Serving(s)</small>
-                                        </div>
-                                    </th>
                                     <td width="100">
                                         <a class="btn btn-sm btn-info w-100" href="{{ route('meals.show', $meal->id) }}">
                                             <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>

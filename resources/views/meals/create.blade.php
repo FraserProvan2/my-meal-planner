@@ -19,16 +19,6 @@
                         <label for="steps">Cooking Steps</label>
                         <textarea class="form-control" id="steps" rows="8" name="steps"></textarea>
                     </div>
-                    <div class="form-group mb-2">
-                        <label for="servings">Servings</label>
-                        <select class="form-control" id="sevings" name="servings">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        </select>
-                    </div>
                     <button type="submit" class="btn btn-primary w-100">Save</button>
                 </form>
             </div>

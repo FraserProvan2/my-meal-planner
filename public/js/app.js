@@ -29471,12 +29471,12 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "h-100" }, [
     this.meal
-      ? _c("div", { staticClass: "meal-plan-item pt-3 px-2" }, [
+      ? _c("div", { staticClass: "meal-plan-item" }, [
           _c("a", { attrs: { href: "/meals/" + this.meal.id } }, [
             _vm._v(_vm._s(this.meal.name)),
           ]),
         ])
-      : _c("div", { staticClass: "meal-plan-item" }),
+      : _c("div", { staticClass: "meal-plan-item no-item" }),
   ])
 }
 var staticRenderFns = []

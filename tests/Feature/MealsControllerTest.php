@@ -47,7 +47,6 @@ class MealsControllerTest extends TestCase
         $data = [
             'name' => 'newMeal',
             'steps' => 'someSteps',
-            'servings' => 1
         ];
 
         $this->post('/meals', $data)
@@ -65,7 +64,6 @@ class MealsControllerTest extends TestCase
         $data = [
             'name' => 'updatedName',
             'steps' => 'updatedSteps',
-            'servings' => 5
         ];
 
         $this->patch('/meals/1', $data)
@@ -83,7 +81,6 @@ class MealsControllerTest extends TestCase
         $data = [
             'name' => 'updatedName',
             'steps' => 'updatedSteps',
-            'servings' => 5
         ];
 
         // User#2 is not author of Meal#1
