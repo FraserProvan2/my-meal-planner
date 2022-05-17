@@ -5681,8 +5681,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["plan"]
+  props: ["meal"]
 });
 
 /***/ }),
@@ -29192,7 +29195,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.monday.breakfast },
+                        attrs: { meal: this.planMemory.monday.breakfast },
                       }),
                     ],
                     1
@@ -29202,7 +29205,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.tuesday.breakfast },
+                        attrs: { meal: this.planMemory.tuesday.breakfast },
                       }),
                     ],
                     1
@@ -29212,7 +29215,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.wednesday.breakfast },
+                        attrs: { meal: this.planMemory.wednesday.breakfast },
                       }),
                     ],
                     1
@@ -29222,7 +29225,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.thursday.breakfast },
+                        attrs: { meal: this.planMemory.thursday.breakfast },
                       }),
                     ],
                     1
@@ -29232,7 +29235,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.friday.breakfast },
+                        attrs: { meal: this.planMemory.friday.breakfast },
                       }),
                     ],
                     1
@@ -29242,7 +29245,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.saturday.breakfast },
+                        attrs: { meal: this.planMemory.saturday.breakfast },
                       }),
                     ],
                     1
@@ -29252,7 +29255,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.sunday.breakfast },
+                        attrs: { meal: this.planMemory.sunday.breakfast },
                       }),
                     ],
                     1
@@ -29268,7 +29271,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.monday.lunch },
+                        attrs: { meal: this.planMemory.monday.lunch },
                       }),
                     ],
                     1
@@ -29278,7 +29281,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.tuesday.lunch },
+                        attrs: { meal: this.planMemory.tuesday.lunch },
                       }),
                     ],
                     1
@@ -29288,7 +29291,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.wednesday.lunch },
+                        attrs: { meal: this.planMemory.wednesday.lunch },
                       }),
                     ],
                     1
@@ -29298,7 +29301,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.thursday.lunch },
+                        attrs: { meal: this.planMemory.thursday.lunch },
                       }),
                     ],
                     1
@@ -29308,7 +29311,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.friday.lunch },
+                        attrs: { meal: this.planMemory.friday.lunch },
                       }),
                     ],
                     1
@@ -29318,7 +29321,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.saturday.lunch },
+                        attrs: { meal: this.planMemory.saturday.lunch },
                       }),
                     ],
                     1
@@ -29328,7 +29331,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.sunday.lunch },
+                        attrs: { meal: this.planMemory.sunday.lunch },
                       }),
                     ],
                     1
@@ -29344,7 +29347,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.monday.dinner },
+                        attrs: { meal: this.planMemory.monday.dinner },
                       }),
                     ],
                     1
@@ -29354,7 +29357,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.tuesday.dinner },
+                        attrs: { meal: this.planMemory.tuesday.dinner },
                       }),
                     ],
                     1
@@ -29364,7 +29367,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.wednesday.dinner },
+                        attrs: { meal: this.planMemory.wednesday.dinner },
                       }),
                     ],
                     1
@@ -29374,7 +29377,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.thursday.dinner },
+                        attrs: { meal: this.planMemory.thursday.dinner },
                       }),
                     ],
                     1
@@ -29384,7 +29387,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.friday.dinner },
+                        attrs: { meal: this.planMemory.friday.dinner },
                       }),
                     ],
                     1
@@ -29394,7 +29397,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.saturday.dinner },
+                        attrs: { meal: this.planMemory.saturday.dinner },
                       }),
                     ],
                     1
@@ -29404,7 +29407,7 @@ var render = function () {
                     "td",
                     [
                       _c("meal-plan-item", {
-                        attrs: { plan: this.planMemory.sunday.dinner },
+                        attrs: { meal: this.planMemory.sunday.dinner },
                       }),
                     ],
                     1
@@ -29466,11 +29469,15 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return this.plan
-    ? _c("div", [
-        _c("a", { attrs: { href: "" } }, [_vm._v(_vm._s(this.plan.name))]),
-      ])
-    : _vm._e()
+  return _c("div", { staticClass: "h-100" }, [
+    this.meal
+      ? _c("div", { staticClass: "meal-plan-item pt-3 px-2" }, [
+          _c("a", { attrs: { href: "/meals/" + this.meal.id } }, [
+            _vm._v(_vm._s(this.meal.name)),
+          ]),
+        ])
+      : _c("div", { staticClass: "meal-plan-item" }),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

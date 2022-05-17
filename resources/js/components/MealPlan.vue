@@ -17,37 +17,37 @@
           
           <!-- Monday breakfast -->
           <td>
-            <meal-plan-item :plan="this.planMemory.monday.breakfast" />
+            <meal-plan-item :meal="this.planMemory.monday.breakfast" />
           </td>
 
           <!-- Tuesday breakfast -->
           <td>
-            <meal-plan-item :plan="this.planMemory.tuesday.breakfast" />
+            <meal-plan-item :meal="this.planMemory.tuesday.breakfast" />
           </td>
 
           <!-- Wednesday breakfast -->
           <td>
-            <meal-plan-item :plan="this.planMemory.wednesday.breakfast" />
+            <meal-plan-item :meal="this.planMemory.wednesday.breakfast" />
           </td>
 
           <!-- Thursday breakfast -->
           <td>
-            <meal-plan-item :plan="this.planMemory.thursday.breakfast" />
+            <meal-plan-item :meal="this.planMemory.thursday.breakfast" />
           </td>
 
           <!-- Friday breakfast -->
           <td>
-            <meal-plan-item :plan="this.planMemory.friday.breakfast" />
+            <meal-plan-item :meal="this.planMemory.friday.breakfast" />
           </td>
 
           <!-- Saturday breakfast -->
           <td>
-            <meal-plan-item :plan="this.planMemory.saturday.breakfast" />
+            <meal-plan-item :meal="this.planMemory.saturday.breakfast" />
           </td>
           
           <!-- Sunday breakfast -->
           <td>
-            <meal-plan-item :plan="this.planMemory.sunday.breakfast" />
+            <meal-plan-item :meal="this.planMemory.sunday.breakfast" />
           </td>
 
         </tr>
@@ -56,37 +56,37 @@
           
           <!-- Monday lunch -->
           <td>
-            <meal-plan-item :plan="this.planMemory.monday.lunch" />
+            <meal-plan-item :meal="this.planMemory.monday.lunch" />
           </td>
 
           <!-- Tuesday lunch -->
           <td>
-            <meal-plan-item :plan="this.planMemory.tuesday.lunch" />
+            <meal-plan-item :meal="this.planMemory.tuesday.lunch" />
           </td>
 
           <!-- Wednesday lunch -->
           <td>
-            <meal-plan-item :plan="this.planMemory.wednesday.lunch" />
+            <meal-plan-item :meal="this.planMemory.wednesday.lunch" />
           </td>
 
           <!-- Thursday lunch -->
           <td>
-            <meal-plan-item :plan="this.planMemory.thursday.lunch" />
+            <meal-plan-item :meal="this.planMemory.thursday.lunch" />
           </td>
 
           <!-- Friday lunch -->
           <td>
-            <meal-plan-item :plan="this.planMemory.friday.lunch" />
+            <meal-plan-item :meal="this.planMemory.friday.lunch" />
           </td>
 
           <!-- Saturday lunch -->
           <td>
-            <meal-plan-item :plan="this.planMemory.saturday.lunch" />
+            <meal-plan-item :meal="this.planMemory.saturday.lunch" />
           </td>
 
           <!-- Sunday lunch -->
           <td>
-            <meal-plan-item :plan="this.planMemory.sunday.lunch" />
+            <meal-plan-item :meal="this.planMemory.sunday.lunch" />
           </td>
 
         </tr>
@@ -95,37 +95,37 @@
 
           <!-- Monday dinner -->
           <td>
-            <meal-plan-item :plan="this.planMemory.monday.dinner" />
+            <meal-plan-item :meal="this.planMemory.monday.dinner" />
           </td>
 
           <!-- Tuesday dinner -->
           <td>
-            <meal-plan-item :plan="this.planMemory.tuesday.dinner" />
+            <meal-plan-item :meal="this.planMemory.tuesday.dinner" />
           </td>
 
           <!-- Wednesday dinner -->
           <td>
-            <meal-plan-item :plan="this.planMemory.wednesday.dinner" />
+            <meal-plan-item :meal="this.planMemory.wednesday.dinner" />
           </td>
 
           <!-- Thursday dinner -->
           <td>
-            <meal-plan-item :plan="this.planMemory.thursday.dinner" />
+            <meal-plan-item :meal="this.planMemory.thursday.dinner" />
           </td>
 
           <!-- Friday dinner -->
           <td>
-            <meal-plan-item :plan="this.planMemory.friday.dinner" />
+            <meal-plan-item :meal="this.planMemory.friday.dinner" />
           </td>
 
           <!-- Saturday dinner -->
           <td>
-            <meal-plan-item :plan="this.planMemory.saturday.dinner" />
+            <meal-plan-item :meal="this.planMemory.saturday.dinner" />
           </td>
 
           <!-- Sunday dinner -->
           <td>
-            <meal-plan-item :plan="this.planMemory.sunday.dinner" />
+            <meal-plan-item :meal="this.planMemory.sunday.dinner" />
           </td>
 
         </tr>
