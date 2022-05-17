@@ -55,7 +55,7 @@
           <h4 class="modal-title" id="shoppingListLabel">Shopping List</h4>
         </div>
         <div class="modal-body">
-          ...
+          {{ $shopping_list }}
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
