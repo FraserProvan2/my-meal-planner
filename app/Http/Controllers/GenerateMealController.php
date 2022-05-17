@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\GeneratePlan;
+use App\Models\Meal;
 use App\Models\MealPlan;
 use App\PlanGenerator;
 use Illuminate\Http\Request;
@@ -16,6 +17,11 @@ class GenerateMealController extends Controller
      */
     public function update() 
     {
+        $users_meals = Meal::where('user_id', Auth::id())->get();
+        if (!$users_meals->count()) {
+            return Redirect('/')->with('error', 'You must add some Meals first!');
+        }
+
         $plan_generator = new PlanGenerator();
 
         // Delete existing plans
