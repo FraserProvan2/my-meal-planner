@@ -11733,3 +11733,13 @@ pre {
 .meal-plan-td {
   width: 12.5%;
 }
+
+.btn-view-shopping-list {
+  margin-top: -7px;
+  padding: auto 25px auto 25px;
+}
+@media only screen and (max-width: 900px) {
+  .btn-view-shopping-list {
+    width: 100%;
+  }
+}

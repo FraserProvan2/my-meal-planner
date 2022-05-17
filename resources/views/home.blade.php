@@ -41,4 +41,28 @@
         </div>
     </div>
 </div>
+
+@if($plan)
+  <button type="button" class="btn btn-primary btn-view-shopping-list px-4 mb-2" data-toggle="modal" data-target="#shoppingList">
+    View Shopping List
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="shoppingList" tabindex="-1" role="dialog" aria-labelledby="shoppingListLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="shoppingListLabel">Shopping List</h5>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+@endif
+
 @endsection
