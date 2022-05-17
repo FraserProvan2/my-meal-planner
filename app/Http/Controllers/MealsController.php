@@ -87,7 +87,6 @@ class MealsController extends Controller
         $request->validate([
             'name' => 'required|max:255',
             'servings' => 'required|integer',
-            'steps' => 'required',
         ]);
 
         $meal->name = $request->get('name');
