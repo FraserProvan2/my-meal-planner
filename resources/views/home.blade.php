@@ -51,8 +51,8 @@
   <div class="modal fade" id="shoppingList" tabindex="-1" role="dialog" aria-labelledby="shoppingListLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="shoppingListLabel">Shopping List</h5>
+        <div class="modal-header text-center">
+          <h4 class="modal-title" id="shoppingListLabel">Shopping List</h4>
         </div>
         <div class="modal-body">
           ...
