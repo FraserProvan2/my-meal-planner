@@ -5685,7 +5685,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["meal"]
+  props: ["meal"],
+  methods: {
+    getTruncatedTitle: function getTruncatedTitle(title) {
+      var max = 26;
+
+      if (title.length > max) {
+        return title.substr(0, max) + '...';
+      }
+
+      return title;
+    }
+  }
 });
 
 /***/ }),
@@ -29193,6 +29204,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.monday.breakfast },
@@ -29203,6 +29215,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.tuesday.breakfast },
@@ -29213,6 +29226,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.wednesday.breakfast },
@@ -29223,6 +29237,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.thursday.breakfast },
@@ -29233,6 +29248,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.friday.breakfast },
@@ -29243,6 +29259,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.saturday.breakfast },
@@ -29253,6 +29270,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.sunday.breakfast },
@@ -29269,6 +29287,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.monday.lunch },
@@ -29279,6 +29298,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.tuesday.lunch },
@@ -29289,6 +29309,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.wednesday.lunch },
@@ -29299,6 +29320,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.thursday.lunch },
@@ -29309,6 +29331,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.friday.lunch },
@@ -29319,6 +29342,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.saturday.lunch },
@@ -29329,6 +29353,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.sunday.lunch },
@@ -29345,6 +29370,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.monday.dinner },
@@ -29355,6 +29381,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.tuesday.dinner },
@@ -29365,6 +29392,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.wednesday.dinner },
@@ -29375,6 +29403,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.thursday.dinner },
@@ -29385,6 +29414,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.friday.dinner },
@@ -29395,6 +29425,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.saturday.dinner },
@@ -29405,6 +29436,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "td",
+                    { staticClass: "meal-plan-td" },
                     [
                       _c("meal-plan-item", {
                         attrs: { meal: this.planMemory.sunday.dinner },
@@ -29471,9 +29503,9 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "h-100" }, [
     this.meal
-      ? _c("div", { staticClass: "meal-plan-item" }, [
+      ? _c("div", { staticClass: "meal-plan-item shadow-sm" }, [
           _c("a", { attrs: { href: "/meals/" + this.meal.id } }, [
-            _vm._v(_vm._s(this.meal.name)),
+            _vm._v(_vm._s(this.getTruncatedTitle(this.meal.name))),
           ]),
         ])
       : _c("div", { staticClass: "meal-plan-item no-item" }),
