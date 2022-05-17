@@ -19,11 +19,7 @@ class PlanTemplateControllerTest extends TestCase
         $user = User::find(1);
         $this->actingAs($user)->assertAuthenticated();
 
-        // Mimic plan template hit (getAndOrCreate)
-        PlanTemplate::create([
-            'user_id' => $user->id,
-            'template' => json_encode(PlanTemplate::getDefaultTemplate())
-        ]);
+        $this->mimicPlanTemplateHit($user->id);
 
         $data = ['template' => '{"template":"{\"friday\":{\"lunch\":1,\"dinner\":1,\"breakfast\":1},\"monday\":{\"lunch\":1,\"dinner\":1,\"breakfast\":0},\"sunday\":{\"lunch\":1,\"dinner\":1,\"breakfast\":1},\"tuesday\":{\"lunch\":1,\"dinner\":1,\"breakfast\":1},\"saturday\":{\"lunch\":1,\"dinner\":1,\"breakfast\":1},\"thursday\":{\"lunch\":1,\"dinner\":1,\"breakfast\":1},\"wednesday\":{\"lunch\":1,\"dinner\":1,\"breakfast\":1}}"}'];
         $this->post('/plan-template', $data)
