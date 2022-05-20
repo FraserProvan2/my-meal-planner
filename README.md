@@ -3,18 +3,23 @@ Weekly meal planner to store cooking steps and create accurate shopping lists
 
 ## Features
 meal list
+
 ![ScreenShot](/showcases/meal-list.png)
 
 view meal
+
 ![ScreenShot](/showcases/meal-view.png)
 
 show
+
 ![ScreenShot](/showcases/plan.png)
 
 plan template
+
 ![ScreenShot](/showcases/plan-template.png)
 
 shopping list
+
 ![ScreenShot](/showcases/shopping-list.png)
 
 ## Getting Started
