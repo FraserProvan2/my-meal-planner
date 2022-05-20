@@ -18,8 +18,8 @@ class PlanGenerator
         $plan_template = (array) $this->getPlanTemplate();
         $meals = $this->getShuffledMealsBySlot();
 
-        foreach($plan_template as $day => $meal_slots) {
-            foreach($meal_slots as $meal_name => $value) {
+        foreach ($plan_template as $day => $meal_slots) {
+            foreach ($meal_slots as $meal_name => $value) {
                 if ($value == 0) {
                     continue;
                 }
@@ -50,7 +50,7 @@ class PlanGenerator
         $dinner_options = [];
 
         $meals = Meal::where('user_id', Auth::id())->get();
-        foreach($meals as $meal) {
+        foreach ($meals as $meal) {
             if ($meal->in_breakfast) $breakfast_options[] = $meal;
             if ($meal->in_lunch) $lunch_options[] = $meal;
             if ($meal->in_dinner) $dinner_options[] = $meal;
@@ -71,12 +71,12 @@ class PlanGenerator
      * Fetches users plan template
      * 
      * @return Array
-    */
+     */
     private function getPlanTemplate()
     {
         $plan_template_json = (PlanTemplate::where('user_id', Auth::id())
             ->firstOrFail())->template;
-    
+
         return json_decode($plan_template_json, true);
     }
 }

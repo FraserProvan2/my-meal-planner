@@ -91,7 +91,7 @@ class IngredientPickerController extends Controller
         $link = MealHasIngredient::where('meal_id', $request->get('meal_id'))
             ->where('ingredient_id', $request->get('ingredient_id'))
             ->where('id', $request->get('link_id'));
-        
+
         if (!$link) {
             return new JsonResponse('Failed to find Ingreident', 400);
         }

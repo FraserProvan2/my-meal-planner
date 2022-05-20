@@ -92,15 +92,21 @@ class MealsController extends Controller
 
         if ($request->get('in_breakfast') == 'on') {
             $meal->in_breakfast = 1;
-        } else { $meal->in_breakfast = 0; }
+        } else {
+            $meal->in_breakfast = 0;
+        }
 
         if ($request->get('in_lunch') == 'on') {
             $meal->in_lunch = 1;
-        } else { $meal->in_lunch = 0; }
+        } else {
+            $meal->in_lunch = 0;
+        }
 
         if ($request->get('in_dinner') == 'on') {
             $meal->in_dinner = 1;
-        } else { $meal->in_dinner = 0; }
+        } else {
+            $meal->in_dinner = 0;
+        }
 
         $meal->save();
 

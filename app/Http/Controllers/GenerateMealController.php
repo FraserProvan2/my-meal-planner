@@ -15,7 +15,7 @@ class GenerateMealController extends Controller
     /**
      * Generate New Meal Plan
      */
-    public function update() 
+    public function update()
     {
         $users_meals = Meal::where('user_id', Auth::id())->get();
         if (!$users_meals->count()) {

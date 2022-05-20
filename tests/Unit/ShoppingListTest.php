@@ -29,7 +29,7 @@ class ShoppingListTest extends TestCase
 
         $this->assertIsArray($shopping_list);
         $first_record_id = array_key_first($shopping_list);
-        $this->assertArrayHasKey('name', $shopping_list[$first_record_id]); 
+        $this->assertArrayHasKey('name', $shopping_list[$first_record_id]);
         $this->assertArrayHasKey('qty', $shopping_list[$first_record_id]);
     }
 }
