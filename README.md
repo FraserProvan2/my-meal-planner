@@ -1,20 +1,21 @@
 # MyMeals
 Weekly meal planner to store cooking steps and create accurate shopping lists
 
-## About
-![](https://raw.githubusercontent.com/FraserProvan2/MyMealPlanner/main/showcases/showcase.png?token=GHSAT0AAAAAABUYVDFSYDLBII3VCW2RNAZAYUH3SEA)
+## Features
+meal list
+![ScreenShot](/showcases/meal-list.png)
 
-![](https://raw.githubusercontent.com/FraserProvan2/MyMealPlanner/main/showcases/shopping-list.png?token=GHSAT0AAAAAABUYVDFTEHFNTHO2WRWZK5YYYUH3VPA)
+view meal
+![ScreenShot](/showcases/meal-view.png)
 
-![](https://raw.githubusercontent.com/FraserProvan2/MyMealPlanner/main/showcases/plan-template.png?token=GHSAT0AAAAAABUYVDFSAEJXZG27YBG45RLSYUH3VSQ)
+show
+![ScreenShot](/showcases/plan.png)
 
-![](https://raw.githubusercontent.com/FraserProvan2/MyMealPlanner/main/showcases/meal-view.png?token=GHSAT0AAAAAABUYVDFT7QRGAFLE2ZRHUYI6YUH3VWA)
+plan template
+![ScreenShot](/showcases/plan-template.png)
 
-![](https://raw.githubusercontent.com/FraserProvan2/MyMealPlanner/main/showcases/meal-list.png?token=GHSAT0AAAAAABUYVDFT2V5KLAMVC56XF36QYUH3VYQ)
-
-
-
-
+shopping list
+![ScreenShot](/showcases/shopping-list.png)
 
 ## Getting Started
 #### Install Composer/Dependencies with (In Order):
