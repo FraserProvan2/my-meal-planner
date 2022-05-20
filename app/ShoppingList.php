@@ -16,14 +16,36 @@ class ShoppingList
 
     /**
      * Gets shopping list
+     * 
+     * @return Array
      */
     public function getList()
     {
-        $meals = $this->getMeals();
+        // Sort meals ingredients into structure for calculating
+        $list = [];
+        foreach($this->getMeals() as $meal) {
+            foreach($meal->ingredients as $link) {
+                $list[$link['ingredient']->id]['name'] = $link['ingredient']->name;
+                $list[$link['ingredient']->id]['qty'][] = $link['qty'];
+            }
+        }
 
-        dd($meals);
+        // Add total to ingredient total if numeric
+        foreach($list as $id => $ingredient) {
+            $amount = 0;
+            foreach($ingredient['qty'] as $qty) {
+                if (is_numeric($qty)) {
+                    $amount = $amount + $qty;
+                }
+            }
 
-        return 123;
+            // Set qty total to list array 
+            if (is_numeric($qty)) {
+                $list[$id]['qty'] = $amount;
+            }
+        }
+
+        return $list;
     }
 
     /**

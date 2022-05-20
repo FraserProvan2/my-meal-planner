@@ -31,7 +31,7 @@ class HomeController extends Controller
         if (!$plan_record) {
             $plan = null;
             $shopping_list = null;
-        } else{
+        } else {
             $plan = $plan_record->withMealData();
             $shopping_list = (new ShoppingList($plan_record))->getList();
         }
