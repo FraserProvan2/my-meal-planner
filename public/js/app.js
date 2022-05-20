@@ -28915,7 +28915,7 @@ var render = function () {
     [
       _c("div", { staticClass: "card mb-3" }, [
         _c("div", { staticClass: "card-header bg-secondary h4" }, [
-          _vm._v("Igrendients"),
+          _vm._v("Ingredients"),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
@@ -28971,7 +28971,7 @@ var render = function () {
       _vm._v(" "),
       _c("div", { staticClass: "card mb-3" }, [
         _c("div", { staticClass: "card-header bg-secondary h4" }, [
-          _vm._v("Add Igrendient"),
+          _vm._v("Add Ingredient"),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
@@ -29102,7 +29102,7 @@ var render = function () {
       this.showCreateIngredient
         ? _c("div", { staticClass: "card mb-3" }, [
             _c("div", { staticClass: "card-header bg-secondary h4" }, [
-              _vm._v("Create New Igrendient"),
+              _vm._v("Create New Ingredient"),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [

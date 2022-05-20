@@ -2,7 +2,7 @@
   <div>
     <!-- Ingredients -->
     <div class="card mb-3">
-      <div class="card-header bg-secondary h4">Igrendients</div>
+      <div class="card-header bg-secondary h4">Ingredients</div>
       <div class="card-body">
         <div
           v-if="this.mealsIngredientsList.length < 1"
@@ -33,7 +33,7 @@
 
     <!-- Add Ingredient -->
     <div class="card mb-3">
-      <div class="card-header bg-secondary h4">Add Igrendient</div>
+      <div class="card-header bg-secondary h4">Add Ingredient</div>
       <div class="card-body">
         <div class="row">
           <div class="col-md-8">
@@ -94,7 +94,7 @@
 
     <!-- Create Ingredient -->
     <div class="card mb-3" v-if="this.showCreateIngredient">
-      <div class="card-header bg-secondary h4">Create New Igrendient</div>
+      <div class="card-header bg-secondary h4">Create New Ingredient</div>
       <div class="card-body">
         <div class="form-group">
           <label for="ingredientName">Ingredient Name</label>
