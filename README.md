@@ -2,24 +2,20 @@
 Weekly meal planner to store cooking steps and create accurate shopping lists
 
 ## Features
-meal list
 
+Save and organise meals to be included in the Meal Plan.
 ![ScreenShot](/showcases/meal-list.png)
 
-view meal
-
+View meal, specify which meal slots the meal will appear in. You can click through to here from the Meal Plan so its recommended to add high quality data to steps for when its time to cook.
 ![ScreenShot](/showcases/meal-view.png)
 
-show
-
+Randomly create Meal Plans based on your created meals.
 ![ScreenShot](/showcases/plan.png)
 
-plan template
-
+Tweaks your Template to fit your schedule, going into the office one day? Parents for a roast? Disable the meal slots accordingly. 
 ![ScreenShot](/showcases/plan-template.png)
 
-shopping list
-
+View the total ingredients you will need for your Meal Plan, it calculates this from your Meals, so be accurate.
 ![ScreenShot](/showcases/shopping-list.png)
 
 ## Getting Started
