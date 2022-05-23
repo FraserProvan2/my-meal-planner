@@ -1,5 +1,5 @@
 # MyMeals
-Weekly meal planner to store cooking steps and create accurate shopping lists, built in Laravel 8 and Vue.js.
+Weekly meal planner to plan meals and create accurate shopping lists, built in Laravel 8 and Vue.js.
 
 ## Features
 
